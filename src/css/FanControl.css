@@ -1,0 +1,45 @@
+.container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.on-btn {
+  background-color: #4caf50;
+}
+
+.off-btn {
+  background-color: #f44336;
+}
+.container-fan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;          /* Full viewport height */
+  background: #f4f4f4;  
+}

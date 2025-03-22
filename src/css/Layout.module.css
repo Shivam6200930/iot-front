@@ -1,0 +1,13 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 100px 20px; /* Prevent overlap with header and footer */
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  
