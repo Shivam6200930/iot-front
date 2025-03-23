@@ -10,7 +10,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      await axios.post('http://localhost:5001/api/signup', { email, password });
+      await axios.post(`${import.meta.env.VITE_API_URL}signup`, { email, password });
       alert('Signup successful');
       navigate('/login');
     } catch (error) {

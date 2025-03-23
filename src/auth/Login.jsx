@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const { data } = await axios.post('http://localhost:5001/api/login', { email, password });
+      const { data } = await axios.post(`${import.meta.env.VITE_API_URL}login`, { email, password });
       console.log(data.user.email)
       localStorage.setItem('email', data.user.email);
       localStorage.setItem('token', data.token);
