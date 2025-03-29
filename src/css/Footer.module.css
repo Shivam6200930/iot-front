@@ -1,14 +1,135 @@
+/* ============================
+   Footer Container
+============================ */
 .footer {
-    background: #0d6efd;
-    color: white;
-    padding: 15px;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 40px 80px;
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ============================
+   Footer Layout
+============================ */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================
+   Footer Sections
+============================ */
+.section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #00bcd4;
+}
+
+/* ============================
+   Contact Section
+============================ */
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.contactItem:hover {
+  color: #00bcd4;
+  transform: translateX(5px);
+}
+
+/* ============================
+   Navigation Section
+============================ */
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+.section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section ul li a:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+/* ============================
+   Social Media Section
+============================ */
+.socialLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.socialLinks a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #00bcd4;
+  transform: scale(1.2);
+}
+
+/* ============================
+   Copyright Section
+============================ */
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ============================
+   Responsive Design
+============================ */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 18px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
   }
-  
+
+  .section {
+    min-width: 100%;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 40px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+}

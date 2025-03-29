@@ -1,3 +1,20 @@
+/* Light Mode */
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --primary-color: #4caf50;
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --primary-color: #f39c12;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,8 +22,33 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #f4f4f4;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Card Style */
+.card {
+  background: var(--card-bg);
+  box-shadow: 0 4px 12px var(--card-shadow);
+  padding: 20px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+/* Toggle Container */
+.toggleContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.toggleContainer:hover {
+  background: var(--card-shadow);
 }

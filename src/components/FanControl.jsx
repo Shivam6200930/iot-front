@@ -8,7 +8,7 @@ const FanControl = () => {
 
   const toggleLED = async (ledState) => {
     try {
-      await axios.post('http://localhost:5001/api/user/led', { ledState , email});
+      await axios.post(`${import.meta.env.VITE_API_URL}/user/led`, { ledState , email});
       setStatus(ledState);
     } catch (error) {
       console.error('Error:', error);

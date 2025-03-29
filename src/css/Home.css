@@ -1,0 +1,250 @@
+/* ============================
+   Light & Dark Mode
+============================ */
+
+/* Light Mode */
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --primary-color: #4caf50;
+  --secondary-color: #00bcd4;
+  --button-bg: #ff9800;
+  --footer-bg: #1e1e2f;
+  --footer-text: #ccc;
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --primary-color: #f39c12;
+  --secondary-color: #00e5ff;
+  --button-bg: #e68a00;
+  --footer-bg: #0e0e14;
+  --footer-text: #aaa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================
+   General Styling
+============================ */
+.home-container {
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ============================
+   Hero Section
+============================ */
+.hero {
+  background: linear-gradient(to right, var(--secondary-color), var(--footer-bg));
+  color: #fff;
+  padding: 100px 50px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  color: #fff;
+  background: var(--button-bg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 25px;
+}
+
+.cta-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+/* ============================
+   Features Section
+============================ */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 80px 50px;
+  background: var(--card-bg);
+}
+
+.feature {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid var(--card-shadow);
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--card-bg);
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px var(--secondary-color);
+}
+
+.feature-icon {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.feature p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* ============================
+   Fan Control Section
+============================ */
+.fan-section {
+  padding: 80px 50px;
+  text-align: center;
+  background: var(--bg-color);
+}
+
+.fan-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+.fan-section .container-fan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+/* ============================
+   Footer Section
+============================ */
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 30px 50px;
+  font-size: 14px;
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, color 0.3s;
+}
+
+.footer p {
+  margin: 0;
+  color: var(--footer-text);
+}
+
+/* ============================
+   Toggle Button
+============================ */
+.toggleContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+
+.toggleContainer:hover {
+  background: var(--button-bg);
+}
+
+/* ============================
+   Animations
+============================ */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================
+   Responsive Design
+============================ */
+@media (max-width: 1024px) {
+  .features {
+    grid-template-columns: 1fr;
+    padding: 60px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .cta-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .features {
+    padding: 40px 20px;
+  }
+
+  .fan-section {
+    padding: 40px 20px;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
