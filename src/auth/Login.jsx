@@ -21,7 +21,7 @@ const Login = () => {
     }
 
     toast.promise(
-      axios.post(`${import.meta.env.VITE_API_URL}/login`, { email, password }),
+      axios.post(`${import.meta.env.VITE_API_URL}/user/login`, { email, password }),
       {
         loading: 'Logging in...',
         success: (res) => {
@@ -46,7 +46,7 @@ const Login = () => {
       const decoded = jwtDecode(response.credential);
 
       toast.promise(
-        axios.post(`${import.meta.env.VITE_API_URL}/google-login`, {
+        axios.post(`${import.meta.env.VITE_API_URL}/user/google-login`, {
           token: response.credential
         }),
         {
