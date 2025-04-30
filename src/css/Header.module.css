@@ -185,6 +185,14 @@
    Responsive Design
 ============================ */
 @media (max-width: 1024px) {
+  .header{
+    padding-left: 0px;
+    padding-right: 30px ;
+    padding-top: 20px;
+  }
+  .logo h1{
+    display:none;
+  }
   .nav {
     display: none;
     flex-direction: column;

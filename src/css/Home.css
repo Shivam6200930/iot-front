@@ -39,6 +39,7 @@ body {
   color: var(--text-color);
   transition: background 0.3s, color 0.3s;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* ============================
@@ -49,6 +50,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* ============================
@@ -60,6 +62,7 @@ body {
   padding: 100px 50px;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
 }
 
 .hero-content h1 {
@@ -101,6 +104,7 @@ body {
   gap: 40px;
   padding: 80px 50px;
   background: var(--card-bg);
+  box-sizing: border-box; /* Prevent overflow */
 }
 
 .feature {
@@ -167,6 +171,7 @@ body {
   font-size: 14px;
   box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.3);
   transition: background 0.3s, color 0.3s;
+  box-sizing: border-box; /* Prevent overflow */
 }
 
 .footer p {
@@ -211,7 +216,7 @@ body {
 /* ============================
    Responsive Design
 ============================ */
-@media (max-width: 1024px) {
+@media (max-width: 856px) {
   .features {
     grid-template-columns: 1fr;
     padding: 60px 30px;
@@ -248,3 +253,9 @@ body {
     padding: 20px;
   }
 }
+
+/* ============================
+   Prevent Horizontal Scroll on Mobile
+============================ */
+
+

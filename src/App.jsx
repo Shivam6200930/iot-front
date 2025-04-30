@@ -9,13 +9,15 @@ import Device from './pages/Devices'
 import ControlsDevices from './pages/ControlsDevices'
 import Analytics from './pages/Analytics'
 import Settings from './pages/Settings'
+import Support from './pages/Support'
+import Faq from './pages/Faq'
 const App = () => {
   return (
      <ThemeProvider>
     <Router>
       <Routes>
         <Route path='/'element={<Layout/>}>
-             <Route index element={<><h1>Homepage</h1></>}/>
+             <Route index element={<Home/>}/>
         </Route>
         <Route path='/login'element={<Layout/>}>
              <Route index element={<Login/>}/>
@@ -38,6 +40,13 @@ const App = () => {
         <Route path='/settings'element={<Layout/>}>
              <Route index element={<Settings/>}/>
         </Route>
+            <Route path='/support'element={<Layout/>}>
+                <Route index element={<Support/>}/>
+               </Route>  
+
+               <Route path='/faq'element={<Layout/>}>
+                    <Route index element={<Faq/>}/>
+               </Route>
       </Routes>
     </Router>
    </ThemeProvider>

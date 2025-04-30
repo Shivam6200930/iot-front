@@ -43,10 +43,10 @@ const Home = () => {
       </section>
 
       {/* Fan Control Section */}
-      <section className="fan-section">
+      {/* <section className="fan-section">
         <h2>Fan Control</h2>
         <FanControl />
-      </section>
+      </section> */}
     </div>
   );
 };

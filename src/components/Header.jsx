@@ -19,6 +19,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
+    
       {/* Logo */}
       <div className={styles.logo} onClick={() => navigate('/')}>
         <Power size={32} className={styles.icon} />
